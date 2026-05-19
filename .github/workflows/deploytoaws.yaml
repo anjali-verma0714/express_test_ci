@@ -32,7 +32,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            cd /var/www/deployment
+            cd /var/www/express_test_ci
 
             git pull origin main
 
