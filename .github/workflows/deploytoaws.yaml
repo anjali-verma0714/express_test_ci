@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version:'v22.21.1'
 
       - name: Install Dependencies
         run: npm install
@@ -35,4 +35,6 @@ jobs:
 
             npm install
 
-            pm2 restart express_test_ci || pm2 start npm --name "express_test_ci" -- start
+            pm2 restart express_test_ci || pm2 start ./bin/www --name express_test_ci
+
+            pm2 save
