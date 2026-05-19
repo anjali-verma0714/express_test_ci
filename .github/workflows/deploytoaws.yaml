@@ -16,19 +16,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.21.1'
+          node-version: 22
 
       - name: Install Dependencies
         run: npm install
 
-      - name: install Packages
-        run: npm install
-
-      - name: Deploy to ec2
+      - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: "ubuntu"
+          username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
@@ -38,8 +35,4 @@ jobs:
 
             npm install
 
-            npm run build
-
-            pm2 restart all
-
-            sudo systemctl reload nginx
+            pm2 restart express_test_ci || pm2 start npm --name "express_test_ci" -- start
