@@ -35,6 +35,6 @@ jobs:
 
             npm install
 
-            pm2 restart app.js
+            pm2 restart all
 
             pm2 save
