@@ -35,6 +35,6 @@ jobs:
 
             npm install
 
-            pm2 restart all
+            pm2 reload app || pm2 start bin/www --name app --cwd /var/www/express_test_ci
 
             pm2 save
