@@ -1,5 +1,31 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+
+    h1= title
+
+    .card
+      h2 📌 Project Overview
+      p= projectInfo.description
+      p.status Status: #{projectInfo.status}
+      p Version: #{projectInfo.version}
+
+    .card
+      h2 ⚙️ Tech Stack
+      ul
+        each tech in techStack
+          li= tech
+
+    .card
+      h2 🚀 CI/CD Pipeline Flow
+      ol
+        each step in pipelineSteps
+          li= step
+
+    .card
+      h2 🌐 Deployment Info
+      p This application is deployed using GitHub Actions + PM2 on a Linux server.
+
+    footer
+      p.footer Built with DevOps best practices 🚀

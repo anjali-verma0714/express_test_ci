@@ -1,8 +1,65 @@
+/* ===== Global Styles ===== */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
-a {
-  color: #00B7FF;
+/* ===== Container ===== */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* ===== Title ===== */
+h1 {
+  text-align: center;
+  color: #1f3c88;
+  margin-bottom: 10px;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== Section Headings ===== */
+.card h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* ===== Status Highlight ===== */
+.status {
+  color: green;
+  font-weight: bold;
+}
+
+/* ===== Lists ===== */
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  padding: 5px 0;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+  font-size: 14px;
 }
