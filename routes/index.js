@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title: 'CI/CD DevOps Project  by Anjali 🚀',
+    title: 'CI/CD DevOps Project  by tnplap vinay sir 🚀',
 
     projectInfo: {
       description: 'Node.js + Express application deployed using CI/CD pipeline',
